@@ -39,6 +39,13 @@ $days-of-week: (
     }
   }
 
+  &:hover {
+    cursor: pointer;
+    background-color: #FFBFCB;
+    transform: translateY(-20px);
+    transition: 0.5s;
+  }
+
   @each $day, $value in $days-of-week {
     &--start-day-#{$day} :first-child {
       margin-left: ($card-size + $gap-width) * ($value - 1);
