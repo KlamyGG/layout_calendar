@@ -31,19 +31,19 @@ $days-of-week: (
         content: '#{$day}';
       }
     }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ffbfcb;
+      transform: translateY(-20px);
+      transition: 0.5s;
+    }
   }
 
   @for $day from 28 through 31 {
     &--month-length-#{$day} :nth-child(n + #{$day + 1}) {
       display: none;
     }
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: #FFBFCB;
-    transform: translateY(-20px);
-    transition: 0.5s;
   }
 
   @each $day, $value in $days-of-week {
